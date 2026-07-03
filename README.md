@@ -227,10 +227,12 @@ Inventory decisions are based on structured business rules:
 
 ---
 
-## Future Improvements
+## Future Enhancements
 
-- Integration of machine learning forecasting models
-- Real-time inventory tracking system
-- Supplier lead time optimization
-- Profit maximization engine
-- API-based deployment of decision engine
+This system is designed as a scalable Decision Intelligence framework for SME inventory optimization and can be extended in the following directions:
+
+- Integration of machine learning-based forecasting models (e.g., XGBoost, Prophet, LSTM) to improve demand prediction accuracy
+- Real-time inventory tracking and monitoring system for dynamic stock updates
+- Supplier lead time variability modeling and optimization for improved reorder planning
+- Profit maximization engine integrating pricing, demand elasticity, and margin optimization
+- API-based deployment of the decision engine for integration with ERP and e-commerce platforms
