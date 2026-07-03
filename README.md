@@ -171,24 +171,51 @@ Python → SQL (PostgreSQL) → Data Modeling → Forecasting → Decision Engin
 
 ---
 
-## Screenshots
+## 📊 Power BI Dashboards (Decision Intelligence System)
 
-### Executive Summary
-s
+This section presents interactive dashboards built in Power BI to support inventory optimization, demand forecasting, and profitability decision-making for e-commerce SMEs.
 
-### Forecasting & Accuracy
-s
+---
 
-### Decision Engine
-s
+### 📌 Business Impact
+Business value generated from the Decision Intelligence System, including inventory optimization insights and profitability improvements.
 
-### Reorder Worklist
-s
+![Business Impact](screenshots/powerbi/Business_Implications.png)
 
-s
+---
 
-### Data Model
-(Add screenshot)
+### 📌 Executive Summary
+High-level overview of system performance, SKU-level insights, and operational KPIs.
+
+![Executive Summary](screenshots/powerbi/Executive_Summary.png)
+
+---
+
+### 📌 Forecasting & Accuracy
+Demand forecasting insights and trend analysis used to support inventory planning decisions.
+
+![Forecasting & Accuracy](screenshots/powerbi/Forecast_&_Accuracy.png)
+
+---
+
+### 📌 Decision Engine
+Rule-based decision system classifying SKUs into actions such as Reorder, Hold, Reduce, and Discontinue.
+
+![Decision Engine](screenshots/powerbi/Decision_Engine.png)
+
+---
+
+### 📌 Reorder Worklist
+Actionable inventory recommendations generated from forecasting and decision rules.
+
+![Reorder Worklist](screenshots/powerbi/Reorder_Worklist.png)
+
+---
+
+### 📌 Data Model
+Underlying data architecture (star schema) supporting analytics and Power BI reporting layer.
+
+![Data Model](screenshots/powerbi/Data_Model.png)
 
 ---
 
