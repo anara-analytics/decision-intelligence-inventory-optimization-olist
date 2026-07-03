@@ -1,57 +1,73 @@
 # Decision Intelligence System for Inventory & Profit Optimization in E-commerce SMEs (Olist Dataset)
 
+---
+
 ## Executive Summary
 
-This project presents an end-to-end Decision Intelligence System designed to optimize inventory management and profitability for e-commerce SMEs using the Olist dataset.
+This project presents an end-to-end Decision Intelligence System designed to improve inventory management efficiency and profitability for e-commerce Small and Medium-sized Enterprises (SMEs) using the Olist dataset.
 
-Unlike traditional business intelligence dashboards that focus only on historical reporting, this system integrates forecasting, optimization, and rule-based decision-making to generate actionable operational recommendations.
+The system goes beyond traditional business intelligence dashboards by integrating data engineering, forecasting, and rule-based decision logic into a unified analytical framework that supports operational decision-making.
 
-The system answers critical business questions such as:
-- What products should be reordered?
-- Which SKUs should be reduced or discontinued?
-- Where is revenue at risk due to stockouts?
-- How much working capital can be optimized?
+Instead of only describing historical performance, this system generates actionable business decisions such as:
+- What products should be reordered
+- Which SKUs should be reduced or discontinued
+- Where inventory risk and stockout exposure exist
+- How to optimize working capital allocation
 
-The goal is to demonstrate how data-driven decision systems can improve operational efficiency, reduce inventory waste, and increase profitability in small and medium-sized e-commerce businesses.
+This project demonstrates a scalable analytical framework that can be applied across retail, e-commerce, and logistics industries to improve supply chain efficiency and data-driven decision-making.
 
 ---
 
 ## Business Problem
 
-E-commerce SMEs often face inefficiencies in inventory management due to:
+E-commerce SMEs frequently face challenges in inventory and demand planning due to:
 
-- Lack of demand forecasting capabilities
-- Overstocking of low-performing SKUs
-- Stockouts of high-demand products
-- Poor visibility into SKU-level profitability
-- Reactive rather than proactive decision-making
+- Lack of accurate demand forecasting capabilities
+- Overstocking of low-performing products
+- Stockouts of high-demand SKUs leading to lost revenue
+- Limited visibility into SKU-level profitability
+- Reactive decision-making instead of proactive planning
 
-These inefficiencies lead to:
-- Lost sales due to stockouts
+These inefficiencies result in:
+- Revenue loss due to stockouts
 - Excess inventory holding costs
-- Reduced cash flow efficiency
-- Suboptimal product portfolio management
+- Inefficient capital utilization
+- Suboptimal product portfolio performance
 
-This project addresses these challenges by building a structured analytical system that transforms transactional data into forward-looking inventory decisions.
+This project addresses these challenges by developing a structured Decision Intelligence System that transforms raw transactional data into actionable inventory decisions.
 
 ---
 
 ## Solution Overview
 
-The system is designed as a multi-layer analytical architecture:
+The system is built as a multi-layer analytical architecture:
 
 ### 1. Data Layer
 - Olist e-commerce dataset (orders, products, customers, reviews)
-- Structured into relational and analytical tables
+- Structured into relational and analytical models
+- Data stored and managed in PostgreSQL
 
-### 2. Forecasting Layer
-- SKU-level demand forecasting
-- Trend analysis and seasonality detection
-- Forecast accuracy evaluation (MAE, MAPE)
-- Confidence scoring for predictions
+### 2. Data Processing Layer (Python)
+Python is used for:
+- Data cleaning and preprocessing
+- Feature engineering for SKU-level analysis
+- Aggregation of transactional data into time-series structures
+- Preparation of datasets for forecasting and decision modeling
 
-### 3. Decision Engine Layer
-A rule-based system that classifies each SKU into:
+### 3. Data Engineering Layer (SQL)
+SQL is used to:
+- Build fact and dimension tables
+- Create analytical views for reporting
+- Structure data into a scalable star schema model
+
+### 4. Forecasting Layer
+- SKU-level demand analysis and forecasting support
+- Time-series pattern identification
+- Model evaluation using MAE and MAPE
+- Forecast confidence scoring for decision reliability
+
+### 5. Decision Engine Layer
+A rule-based decision system classifies each SKU into:
 
 - Reorder Now
 - Hold
@@ -59,110 +75,75 @@ A rule-based system that classifies each SKU into:
 - Discontinue
 
 Based on:
-- Forecast demand
+- Forecasted demand
 - Safety stock levels
-- Reorder points
+- Reorder point calculations
 - Profitability thresholds
-- Demand variability
+- Demand variability and risk exposure
 
-### 4. Business Intelligence Layer
-- Power BI dashboards for executive decision-making
-- KPI tracking (revenue, profit, risk, opportunity)
-- Scenario analysis and what-if parameters
-
----
-
-## Data Sources
-
-The project uses the publicly available **Olist e-commerce dataset**, which includes:
-
-- Orders and order items
-- Product catalog
-- Customer data
-- Review scores
-- Shipping and delivery information
-
----
-
-## Methodology
-
-### Data Engineering Layer
-- Data cleaning and transformation using SQL
-- Dimensional modeling (star schema design)
-- Creation of fact and dimension tables
-
-### Forecasting Layer
-- Time-series based demand forecasting at SKU level
-- Error metrics:
-  - MAE (Mean Absolute Error)
-  - MAPE (Mean Absolute Percentage Error)
-- Confidence scoring for forecast reliability
-
-### Inventory Optimization Layer
-- Safety stock calculation
-- Lead time demand estimation
-- Reorder point modeling:
-  > Reorder Point = Lead Time Demand + Safety Stock
-
-### Decision Engine Layer
-Rule-based classification system:
-- Discontinue: low demand + low margin
-- Reorder: stock below reorder point
-- Reduce Stock: excess inventory above threshold
-- Hold: stable SKUs within optimal range
-
----
-
-## Key Features
-
-- SKU-level demand forecasting system
-- Inventory optimization using safety stock modeling
-- Automated decision engine for inventory actions
-- Financial risk quantification (sales at risk, capital at risk)
-- Interactive scenario simulation (what-if analysis)
-- Business impact measurement framework
-
----
-
-## Business Impact
-
-The system provides measurable insights including:
-
-- $358K+ in estimated sales protected
-- $375K+ total identified opportunity
-- Inventory optimization across 596 SKUs
-- Reduction of stockout risk through predictive ordering
-- Identification of non-performing SKUs for discontinuation
-
-These insights demonstrate how data-driven decision systems can improve operational efficiency in e-commerce businesses.
-
----
-
-## Technical Stack
-
-- SQL (Data modeling & transformation)
-- PostgreSQL
-- Power BI
-- DAX (business logic & KPIs)
-- Excel (support modeling)
-- Forecasting techniques (time-series analysis)
-- Dimensional data modeling (star schema)
+### 6. Business Intelligence Layer (Power BI)
+Interactive dashboards provide:
+- Executive KPI monitoring
+- SKU-level profitability analysis
+- Inventory optimization insights
+- Financial impact measurement
+- Scenario-based decision simulation
 
 ---
 
 ## Data Model
 
-The system follows a star schema design:
+The system follows a structured star schema design:
 
-- Fact tables:
-  - monthly_sku_performance
-  - forecast_results
-  - decision_input
+### Fact Tables:
+- monthly_sku_performance
+- forecast_results
+- decision_input
 
-- Dimension tables:
-  - dim_product
-  - dim_category
-  - dim_date
+### Dimension Tables:
+- dim_product
+- dim_category
+- dim_date
+
+This structure enables scalable analysis across time, product categories, and business dimensions.
+
+---
+
+## Key Features
+
+- End-to-end Decision Intelligence framework
+- SKU-level demand forecasting system
+- Inventory optimization using safety stock and reorder point logic
+- Automated decision engine for inventory actions
+- Financial impact quantification (sales at risk, capital optimization)
+- Scenario-based what-if analysis for inventory planning
+- Scalable architecture applicable to SME operations
+
+---
+
+## Business Impact
+
+The system generates measurable business insights, including:
+
+- $358K+ in estimated sales protected through proactive inventory planning
+- $375K+ total identified optimization opportunity
+- 596 SKUs analyzed at granular level
+- Inventory risk classification across product portfolio
+- Reduction of stockout risk through predictive replenishment logic
+
+This demonstrates how data-driven decision systems can significantly improve operational efficiency and financial performance in SME environments.
+
+---
+
+## Technical Stack
+
+- Python (data preprocessing, feature engineering, analytical modeling)
+- SQL (data transformation and data modeling)
+- PostgreSQL (database management)
+- Power BI (interactive dashboards and visualization)
+- DAX (business logic and KPI calculations)
+- Time-series analysis techniques
+- Dimensional data modeling (star schema architecture)
 
 ---
 
@@ -171,68 +152,94 @@ The system follows a star schema design:
 Inventory decisions are based on structured business rules:
 
 - Discontinue:
-  Forecast demand < threshold AND margin < minimum margin
+  SKUs with low forecast demand and low profitability
 
 - Reorder:
-  Current stock ≤ Reorder Point
+  When current stock falls below calculated reorder point
 
 - Reduce Stock:
-  Current stock > Overstock threshold
+  When inventory exceeds optimized threshold levels
 
 - Hold:
-  All other conditions
+  Stable SKUs within optimal inventory range
+
+---
+
+## System Architecture Flow
+
+Python → SQL (PostgreSQL) → Data Modeling → Forecasting → Decision Engine → Power BI Dashboards → Business Insights
 
 ---
 
 ## Screenshots
 
-### Executive Dashboard
-
+### Executive Summary
+s
 
 ### Forecasting & Accuracy
-
+s
 
 ### Decision Engine
-
+s
 
 ### Reorder Worklist
+s
 
-
-### Business Impact
-
+s
 
 ### Data Model
-
+(Add screenshot)
 
 ---
 
 ## How to Run This Project
 
-1. Clone repository
-2. Load Olist dataset into PostgreSQL
-3. Run SQL scripts for data modeling
-4. Open Power BI file (.pbix)
-5. Refresh data source connection
-6. Explore dashboards and decision engine
+This project follows an end-to-end analytical workflow combining Python, SQL, and Power BI.
+
+### 1. Clone Repository
+Clone the repository to your local system.
+
+### 2. Database Setup (PostgreSQL)
+- Create a PostgreSQL database
+- Load Olist dataset into the database
+- Execute SQL scripts to build fact and dimension tables
+
+### 3. Data Processing (Python)
+- Run Python scripts for data cleaning and feature engineering
+- Generate SKU-level aggregated datasets
+- Prepare forecasting-ready time-series structures
+
+### 4. Power BI Dashboard
+- Open the Power BI (.pbix) file
+- Connect to PostgreSQL database
+- Refresh data sources
+
+### 5. Explore Decision Intelligence System
+Analyze:
+- Demand forecasts
+- SKU profitability
+- Inventory optimization decisions
+- Reorder recommendations
+- Financial impact insights
 
 ---
 
 ## Key Learnings
 
-- Translating raw transactional data into decision systems
-- Designing inventory optimization logic using forecasting outputs
-- Building scalable analytical architecture
-- Connecting analytics with financial and operational impact
-- Communicating complex models in business-friendly dashboards
+- Designing end-to-end decision intelligence systems for business operations
+- Translating raw transactional data into actionable business decisions
+- Building forecasting and inventory optimization frameworks
+- Developing scalable data architectures using Python, SQL, and Power BI
+- Connecting analytics directly to financial and operational outcomes
 
 ---
 
-## Future Enhancements
+## System Extension Opportunities
 
-This system is designed as a scalable Decision Intelligence framework for SME inventory optimization and can be extended in the following directions:
+This Decision Intelligence System is fully functional and designed for scalability. It can be extended into production-level environments through:
 
-- Integration of machine learning-based forecasting models (e.g., XGBoost, Prophet, LSTM) to improve demand prediction accuracy
-- Real-time inventory tracking and monitoring system for dynamic stock updates
-- Supplier lead time variability modeling and optimization for improved reorder planning
-- Profit maximization engine integrating pricing, demand elasticity, and margin optimization
-- API-based deployment of the decision engine for integration with ERP and e-commerce platforms
+- Integration of advanced ML forecasting models (e.g., XGBoost, Prophet, LSTM)
+- Real-time inventory tracking systems for dynamic decision-making
+- Supplier lead time variability modeling for improved procurement planning
+- Profit optimization engines integrating pricing and demand elasticity
+- API-based deployment for ERP and e-commerce system integration
