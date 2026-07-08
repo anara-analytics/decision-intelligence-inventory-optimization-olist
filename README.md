@@ -16,6 +16,11 @@ Instead of only describing historical performance, this system generates actiona
 
 This project demonstrates a scalable analytical framework that can be applied across retail, e-commerce, and logistics industries to improve supply chain efficiency and data-driven decision-making.
 
+## Repository Note
+
+Due to GitHub file size limitations, this repository includes representative sample data and SQL import scripts instead of the complete dataset. The sample preserves the original database schema, table relationships, data structure, referential integrity, and SQL workflow used in the full project. All data preprocessing, forecasting, analytical models, business logic, financial analyses, and Power BI dashboards were developed using the complete project dataset. The sample files are provided solely to demonstrate the project's architecture, implementation, and analytical methodology in a GitHub-friendly format.
+
+
 ---
 
 ## Business Problem
