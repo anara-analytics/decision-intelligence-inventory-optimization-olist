@@ -275,3 +275,16 @@ This Decision Intelligence System is fully functional and designed for scalabili
 - Supplier lead time variability modeling for improved procurement planning
 - Profit optimization engines integrating pricing and demand elasticity
 - API-based deployment for ERP and e-commerce system integration
+
+  ---
+
+## About the Author
+
+**Anara Bekbolot**  
+**Business Intelligence Analyst | Self-Employed (Axiom Distribution LLC)**
+
+**SQL | PostgreSQL | Python | Excel | Power BI | Business Intelligence | Decision Intelligence | E-commerce Analytics**
+
+Focused on helping small and medium-sized businesses transform data into actionable insights through business intelligence, profitability analysis, inventory optimization, and data-driven decision-making.
+
+---
